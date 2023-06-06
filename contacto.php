@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos</title>
     <link rel="stylesheet" href="estilos.css">
+    
 </head>
 
 <body>
@@ -19,11 +20,11 @@
         <li><a href="#" data-title="Tiendas">Tiendas</a></li>
     </ul>
     <div class="container">
-        <form action="" autocomplete="off">
+        <form action="" method="POST" id="form">
             <h1>Contactanos</h1>
             <div class="inp">
                 <div class="nombre">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required class="estandar">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre"  class="estandar">
                 </div>
                 <div class="estandar">
                     <input type="radio" id="queja" name="opt" value="reclamo">
@@ -32,21 +33,23 @@
                     <label for="css">Peticion</label><br>
                 </div>
                 <div class="email">
-                    <input type="email" name="email" id="email" placeholder="E-mail" required class="estandar">
+                    <input type="email" name="email" id="email" placeholder="E-mail"  class="estandar">
                 </div>
                 <div class="celular">
-                    <input type="number" name="celular" id="celular" placeholder="3225221875" required class="estandar">
+                    <input type="number" name="celular" id="celular" placeholder="3225221875"  class="estandar">
                 </div>
                 <div class="mensaje">
                     <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escriba sus comentarios..."
-                        required class="estandar"></textarea>
+                         class="estandar"></textarea>
                 </div>
                 <div class="submit">
-                    <button type="Submit">Enviar</button>
-                </div>
+                    <button type="submit">Enviar</button>
+                    <p name="parrafo" id="war" class="war"></p>
+                </div>  
             </div>
         </form>
     </div>
+    <script src="validacion.js"></script>
 </body>
 
 </html>

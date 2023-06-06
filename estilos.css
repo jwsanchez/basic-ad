@@ -104,7 +104,7 @@ a {
 /* pagina de contacto*/
 .container {
   position: relative;
-  height: 550px;
+  height: 680px;
   width: 380px;
   background: rgb(0, 0, 0);
   border-radius: 3px;
@@ -146,7 +146,7 @@ label{
 }
 
 textarea {
-  height: 140px;
+  height: 440px;
   width: 280px;
   color: white;
   outline: none;
@@ -170,6 +170,14 @@ textarea {
   outline: none;
   box-shadow: 0 1px 2px #777;
 
+}
+
+.submit p {
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  color: rgb(233, 116, 7);
+  padding-top: 20px;
 }
 
 ::placeholder {
