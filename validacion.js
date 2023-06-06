@@ -1,5 +1,4 @@
 const nombre = document.getElementById("nombre")
-const queja = document.getElementById("queja")
 const email = document.getElementById("email")
 const celular = document.getElementById("celular")
 const mensaje = document.getElementById("mensaje")
@@ -20,10 +19,21 @@ form.addEventListener("submit", e=>{
         war += `El email no es valido <br>`
         entrar=true
     }
+    if(celular.value.length <10){
+        war += `Número invalido, debe tener al menos 10 caracteres <br>`
+        entrar=true
+    }
+
+    if(!mensaje.value){
+        war += `Debe enviar algun mensaje <br>`
+        entrar=true
+    }
 
     if(entrar){
         parrafo.innerHTML = war
     }else{
-        parrafo.innerHTML = `Enviado`
+        alert("Requerimiento enviado")
+        location.reload()
     }
 })
+s
