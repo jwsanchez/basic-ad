@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   perspective: 1000px;
@@ -126,15 +132,19 @@ form h1 {
   margin: 10px 25px;
 }
 
+
+
 label {
   color: white;
   font-size: 20px;
 
 }
 
+
+
 .estandar {
   color: white;
-  height: 40px;
+  height: 70px;
   width: 280px;
   outline: none;
   border: 1px solid white;
@@ -190,6 +200,8 @@ textarea {
 
 /* Boton de busqueda */
 .group {
+  margin-left: 3em;
+  margin-bottom: 2em;
   display: flex;
   line-height: 28px;
   align-items: center;
@@ -231,8 +243,9 @@ textarea {
 /*Boton Listar */
 
 .btn {
-  
-  font-size: 1.2rem;
+  margin-left: 3em;
+
+  font-size: .9rem;
   padding: 1rem 2.5rem;
   border: none;
   outline: none;
@@ -260,14 +273,14 @@ textarea {
 
 /* PAGINA MISION */
 
-.container-mision{
+.container-mision {
   width: auto;
   margin: auto;
   display: block;
   padding: 5% 20%;
 }
 
-.mision{
+.mision {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #137dae;
   width: 100%;
@@ -276,35 +289,125 @@ textarea {
   color: #fff;
 }
 
-.container-mision h1{
+.container-mision h1 {
   margin-right: 10px;
   text-align: center;
   font-size: 60px;
 }
 
-.container-mision p{
+.container-mision p {
   margin: 5%;
   font-size: 15px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#img_valores{
+#img_valores {
   margin-left: 20%;
 }
 
-.liderazgo{
+.liderazgo {
   background-color: #000;
   color: white;
   padding: 10%;
 }
-.liderazgo h2{
+
+.liderazgo h2 {
   text-align: center;
 }
-.liderazgo p{
+
+.liderazgo p {
   text-align: justify;
 }
-  
 
 
 
+/*Cards*/
 
+.card {
+  margin-left: 5em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  color: #e8e8e8;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.content .para {
+  line-height: 1.5;
+}
+
+.content .btn {
+  color: #e8e8e8;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover::before {
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: none;
+}
+
+.card:hover .btn {
+  color: #212121;
+  background: #e8e8e8;
+}
+
+.content .btn:hover {
+  outline: 2px solid #e8e8e8;
+  background: transparent;
+  color: #e8e8e8;
+}
+
+.content .btn:active {
+  box-shadow: none;
+}
+
+.container1 {
+  margin-top: 3em;
+  columns: 3;
+}
+
+.imgcard {
+  height: 300px;
+}

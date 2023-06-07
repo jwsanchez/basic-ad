@@ -27,7 +27,7 @@
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre"  class="estandar">
                 </div>
                 <div class="estandar">
-                    <input type="radio" id="reclamo" name="opt" value="reclamo">
+                    <input class="inprd" type="radio" id="reclamo" name="opt" value="reclamo">
                     <label for="queja">Reclamo</label><br>
                     <input type="radio" id="peticion" name="opt" value="peticion">
                     <label for="css">Peticion</label><br>
