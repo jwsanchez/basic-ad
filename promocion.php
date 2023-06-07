@@ -1,3 +1,17 @@
+<?php 
+require_once './adaptadores/database.php';
+
+$databaseAdapter = new Database();
+
+if (isset($_GET["search"])) {
+    $result = $databaseAdapter->executeSQL("SELECT * FROM productos WHERE descripcion LIKE '%" . $_GET["search"] . "%'");
+}
+else {
+    $result = $databaseAdapter->executeSQL("SELECT * FROM productos");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,6 +64,11 @@
         text-align: center;
     }
 
+    td img {
+        width: 90pt;
+        height: 90pt;
+    }
+
     .espacio {
         background: #fff
     }
@@ -74,12 +93,10 @@
             <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
         </g>
     </svg>
-    <input placeholder="BUSCAR" type="search" class="input">
+    <form method="get" action="promocion.php">
+        <input placeholder="BUSCAR" type="search" name="search" class="input">
+    </form>
 </div>
-
-
-
-
 
     <div class="frozen-table" data-table="both">
         <table>
@@ -92,30 +109,18 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Contenido 1</td>
-                    <td>Contenido 2</td>
-                    <td>Contenido 3</td>
-                    <td>Contenido 4</td>
-                </tr>
-                <tr>
-                    <td>Contenido 1</td>
-                    <td>Contenido 2</td>
-                    <td>Contenido 3</td>
-                    <td>Contenido 4</td>
-                </tr>
-                <tr>
-                    <td>Contenido 1</td>
-                    <td>Contenido 2</td>
-                    <td>Contenido 3</td>
-                    <td>Contenido 4</td>
-                </tr>
+                <?php
+                    foreach ($result as $key => $value) {
+                        echo "<tr>";
+                        echo "<td><img src='" . $value["ruta_imagen"] . "'></td>";
+                        echo "<td>" . $value["descripcion"] . "</td>";
+                        echo "<td>$" . $value["precio"] . "</td>";
+                        echo "<td>" . $value["disponibles"] . "</td>";
+                        echo "<t/r>";
+                    }
+                ?>
             </tbody>
         </table>
-
-        
-
-        
     </div>
     <button class="btn">
   Listar
