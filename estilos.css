@@ -267,9 +267,44 @@ textarea {
   padding: 5% 20%;
 }
 
-.container-mision h1{
-  text-align: center;
+.mision{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 40px;
+  background-color: #137dae;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  color: #fff;
 }
+
+.container-mision h1{
+  margin-right: 10px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.container-mision p{
+  margin: 5%;
+  font-size: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#img_valores{
+  margin-left: 20%;
+}
+
+.liderazgo{
+  background-color: #000;
+  color: white;
+  padding: 10%;
+}
+.liderazgo h2{
+  text-align: center;
+}
+.liderazgo p{
+  text-align: justify;
+}
+  
+
+
+
 
